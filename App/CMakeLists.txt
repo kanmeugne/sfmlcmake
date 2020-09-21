@@ -6,12 +6,12 @@ project (app C CXX)
 ######################
 # Configure SFML build
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt.in ${CMAKE_CURRENT_SOURCE_DIR}/sfml-download/CMakeLists.txt)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt.in ${CMAKE_SOURCE_DIR}/build/sfml-download/CMakeLists.txt)
 
 execute_process(
 	COMMAND ${CMAKE_COMMAND} -G ${CMAKE_GENERATOR} .
 	RESULT_VARIABLE result
-	WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/sfml-download
+	WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/build/sfml-download
 )
 
 if(result)
@@ -21,7 +21,7 @@ endif()
 execute_process(
 	COMMAND ${CMAKE_COMMAND} --build .
 	RESULT_VARIABLE result
-	WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/sfml-download
+	WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/build/sfml-download
 )
 
 if(result)
@@ -30,14 +30,14 @@ endif()
 
 # Add sfml directly to our build.
 add_subdirectory(
-	${CMAKE_CURRENT_SOURCE_DIR}/sfml-src
-	${CMAKE_CURRENT_SOURCE_DIR}/sfml-build
+	${CMAKE_SOURCE_DIR}/build/sfml-src
+	${CMAKE_SOURCE_DIR}/build/sfml-build
 )
 
 ##############################
 # organize include directories
 
-set(SFML_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/sfml-build/include/)
+set(SFML_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/build/sfml-build/include/)
 
 set(APP_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include/)
 
