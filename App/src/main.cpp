@@ -13,12 +13,11 @@ int main()
     XInitThreads();
 #endif
 	sf::ContextSettings settings;
-	settings.antialiasingLevel = 10;
+	settings.antialiasingLevel = 10;	
+	const unsigned int width = (App::DEFAULT_WIDTH*App::DEFAULT_RESX);
+	const unsigned int height = (App::DEFAULT_HEIGHT*App::DEFAULT_RESY);
 	sf::RenderWindow window (
-		sf::VideoMode(
-			int(App::DEFAULT_WIDTH*App::DEFAULT_RESX),
-			int(App::DEFAULT_HEIGHT*App::DEFAULT_RESY)
-		),
+		sf::VideoMode(width, height),
 		"SFML & CMAKE",
 		sf::Style::Titlebar | sf::Style::Close, 
 		settings

@@ -14,10 +14,10 @@ private:
 	sf::RenderWindow* _window = nullptr;
 
 public:
-	static const int DEFAULT_WIDTH;
-	static const int DEFAULT_HEIGHT;
-	static const double DEFAULT_RESX;
-	static const double DEFAULT_RESY;
+	static const unsigned int DEFAULT_WIDTH;
+	static const unsigned int DEFAULT_HEIGHT;
+	static const unsigned int DEFAULT_RESX;
+	static const unsigned int DEFAULT_RESY;
 	App();
 	virtual ~App();
 	void setWindow(sf::RenderWindow*);

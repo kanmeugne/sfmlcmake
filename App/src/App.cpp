@@ -2,10 +2,10 @@
 #include <SFML/Graphics.hpp>
 
 
-const int App::DEFAULT_WIDTH = 400;
-const int App::DEFAULT_HEIGHT = 300;
-const double App::DEFAULT_RESX = 2.;
-const double App::DEFAULT_RESY = 2.;
+const unsigned int App::DEFAULT_WIDTH = 400;
+const unsigned int App::DEFAULT_HEIGHT = 300;
+const unsigned int App::DEFAULT_RESX = 2;
+const unsigned int App::DEFAULT_RESY = 2;
 
 void App::setWindow(sf::RenderWindow *w)
 {
