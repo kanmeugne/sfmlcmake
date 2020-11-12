@@ -191,7 +191,7 @@ You should be able to launch the executable located in the `bin` folder and see 
 ./bin/Debug/app
 ```
 
-![screenshot](/images/sfml-window.gif)
+![screenshot](https://kanmeugne.github.io/images/sfml-2d-grid.gif)
 > **Note**: On ubuntu 18.08 with gcc 7.5
 
 Smile! Now you are ready to take your graphical app wherever you want. Enjoy and feel free to send me your feedbacks!
